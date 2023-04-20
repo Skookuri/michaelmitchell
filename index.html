@@ -93,6 +93,16 @@
             height: 80vh;
         }
         
+        .secondsection {
+    		opacity: 0.05;
+    		transition: opacity 1s ease-in-out;
+		}
+
+		.fadeIn {
+    		opacity: 1;
+    
+		}
+        
     </style>
 </head>
 <body>
@@ -109,8 +119,24 @@
 <div class="scrim"></div> <!-- Add the scrim here -->
 <h1 class="homename">MICHAEL<br>MITCHELL</h1>
 </section>
-<section style="background-color: #F5F0EA; z-index: 10;">
+<section class="secondsection" style="background-color: #F5F0EA; z-index: 10;">
 <div>eee</div>
 </section>
+
+<script>
+$(document).ready(function() {
+    $(window).scroll(function() {
+        $('.secondsection').each(function(){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+600) {
+                $(this).addClass("fadeIn");
+            } else {
+                $(this).removeClass("fadeIn");
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>
