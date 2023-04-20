@@ -11,18 +11,42 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         
-    	.homename {
-        	font-size: 140px;
-            color: rgba(128,0,32,0.8);
-            margin-top: 20vh; /* Added to center vertically */
-            float: right;
-            letter-spacing: -10px;
+    	.title {
+        	float: right;
+            
             padding-right: 25px;
+            margin-top: 20vh; /* Added to center vertically */
+        	
         }
         
-        .homename:hover {
+        
+        .name {
+        	color: rgba(128,0,32,0.8);
+        	font-size: 140px;
+            font-weight: bold;
+            letter-spacing: -10px;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+        	font-size: 50px;
+            margin: 0;
+            color: grey;
+            opacity; 0.7;
+            font-style: italic;
+            
+        }
+        
+        .name:hover, .subtitle:hover {
         	color: rgba(245,240,234,0.8);
             transition: 0.4s ease 0s;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            float: right;
         }
                 	
         
@@ -118,11 +142,21 @@
   <a href="#contact">CONTACT</a>
   <a href="#about">ABOUT</a>
 </div>
+<br>
 <section class="firstsection" style="text-align: right;">
 <img src="https://media.discordapp.net/attachments/674069786140868608/1098655108906106990/image.png?width=1506&height=1170" alt="A picture of Michael Mitchell.">
 <div class="scrim"></div> <!-- Add the scrim here -->
-<h1 class="homename">MICHAEL<br>MITCHELL</h1>
+
+<div class="title">
+	<h1 class="name">MICHAEL<br>MITCHELL</h1>
+    <div class="container">
+    	<p class="subtitle">Singer</p>
+        <p class="subtitle">&nbsp;|&nbsp;</p>
+    	<p class="subtitle">Vocal Coach</p>
+    </div>
+</div>
 </section>
+
 <section class="secondsection" style="background-color: #F5F0EA; z-index: 10;">
 <div>eee</div>
 </section>
